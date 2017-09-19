@@ -50,7 +50,7 @@ class MyView : View("Form") {
     fun validateUser(username: String, password: String): Boolean {
         val statement = db.createStatement()
 
-        val sql = "SELECT COUNT(*) FROM USER WHERE USERNAME = '$username' AND PASSWORD = '$password'"
+        val sql = "SELECT COUNT(*) FROM USER WHERE USERNAME = '" + username + "' AND PASSWORD = '" + password  + "'"
         sqlLabel.text = sql
 
         println(sql)
@@ -69,7 +69,7 @@ val db = DriverManager.getConnection("jdbc:sqlite::memory:").apply {
         execute("CREATE TABLE USER (ID INTEGER PRIMARY KEY, USERNAME VARCHAR(30) NOT NULL, PASSWORD VARCHAR(30) NOT NULL)")
         execute("INSERT INTO USER (USERNAME,PASSWORD) VALUES ('thomasnield','password123')")
         execute("INSERT INTO USER (USERNAME,PASSWORD) VALUES ('bobmarshal','batman43')")
-        close()
+    close()
     }
 }
 

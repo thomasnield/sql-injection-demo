@@ -3,7 +3,7 @@ buildscript {
     mavenCentral()
   }
   dependencies {
-    classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.0.+'
+    classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.+'
   }
 }
 
@@ -14,11 +14,11 @@ repositories {
 }
 
 dependencies {
-  compile 'org.jetbrains.kotlin:kotlin-stdlib:1.0.+'
+  compile 'org.jetbrains.kotlin:kotlin-stdlib:1.+'
 }
 
 dependencies {
-    compile 'no.tornado:tornadofx:1.5.4'
+    compile 'no.tornado:tornadofx:1.+'
     compile 'org.xerial:sqlite-jdbc:3.8.11.2'
     testCompile 'junit:junit:4.12'
 }

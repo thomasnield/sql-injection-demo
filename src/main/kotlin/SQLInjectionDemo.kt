@@ -1,5 +1,6 @@
 @file:Suppress("ConvertToStringTemplate")
 
+import javafx.application.Application
 import javafx.scene.control.Alert
 import javafx.scene.control.Label
 import javafx.scene.control.TextField
@@ -8,9 +9,13 @@ import javafx.scene.image.ImageView
 import tornadofx.*
 import java.sql.DriverManager
 
+fun main(args: Array<String>) {
+    Application.launch(MyApp::class.java, *args)
+}
 class MyApp: App(MyView::class)
 
 class MyView : View("Form") {
+
 
     private var username: TextField by singleAssign()
     private var password: TextField by singleAssign()

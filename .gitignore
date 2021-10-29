@@ -14,3 +14,9 @@
 hs_err_pid*
 
 *.iml
+
+# Gradle
+
+build/*
+.gradle/*
+
